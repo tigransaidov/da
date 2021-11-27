@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Aeroport-Bold";
   font-display: swap;
-  src: url("../fonts/Aeroport-Bold.woff") format("woff"), url("../fonts/Aeroport-Bold.woff2") format("woff2");
+  src: url("../fonts/Aeroport.woff") format("woff"), url("../fonts/Aeroport.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -19,15 +19,15 @@
 @font-face {
   font-family: "Aeroport-Italic";
   font-display: swap;
-  src: url("../fonts/Aeroport-Italic.woff") format("woff"), url("../fonts/Aeroport-Italic.woff2") format("woff2");
+  src: url("../fonts/Aeroport.woff") format("woff"), url("../fonts/Aeroport.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: "Aeroport-Light";
   font-display: swap;
-  src: url("../fonts/Aeroport-Light.woff") format("woff"), url("../fonts/Aeroport-Light.woff2") format("woff2");
+  src: url("../fonts/Aeroport.woff") format("woff"), url("../fonts/Aeroport.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -35,15 +35,15 @@
 @font-face {
   font-family: "Aeroport-LightItalic";
   font-display: swap;
-  src: url("../fonts/Aeroport-LightItalic.woff") format("woff"), url("../fonts/Aeroport-LightItalic.woff2") format("woff2");
+  src: url("../fonts/Aeroport.woff") format("woff"), url("../fonts/Aeroport.woff2") format("woff2");
   font-weight: 300;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: "Aeroport-Medium";
   font-display: swap;
-  src: url("../fonts/Aeroport-Medium.woff") format("woff"), url("../fonts/Aeroport-Medium.woff2") format("woff2");
+  src: url("../fonts/Aeroport.woff") format("woff"), url("../fonts/Aeroport.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -51,9 +51,9 @@
 @font-face {
   font-family: "Aeroport-MediumItalic";
   font-display: swap;
-  src: url("../fonts/Aeroport-MediumItalic.woff") format("woff"), url("../fonts/Aeroport-MediumItalic.woff2") format("woff2");
+  src: url("../fonts/Aeroport.woff") format("woff"), url("../fonts/Aeroport.woff2") format("woff2");
   font-weight: 500;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -75,7 +75,7 @@
 @font-face {
   font-family: "ProximaNovaCond-Bold";
   font-display: swap;
-  src: url("../fonts/ProximaNovaCond-Bold.woff") format("woff"), url("../fonts/ProximaNovaCond-Bold.woff2") format("woff2");
+  src: url("../fonts/ProximaNovaCond.woff") format("woff"), url("../fonts/ProximaNovaCond.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -7402,7 +7402,7 @@ main {
 
 ._section-subtitle {
   color: #fff;
-  font-family: 'ProximaNovaCond-Bold';
+  font-family: 'ProximaNovaCond', sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: .5px;
@@ -7541,6 +7541,28 @@ main {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-bottom-color: #6c757d;
+}
+
+._fs {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+
+._fs ._intro-bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.label-water .label-inner {
+  background-color: #e9ecef;
+}
+
+.label-water .product-image {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ======================================================= */
@@ -8421,6 +8443,124 @@ main {
 .footer-bottom__copyright {
   color: #adb5bd;
   font-size: 1.1rem;
+}
+
+.quelle-page .intro {
+  position: relative;
+}
+
+.quelle-page .intro__header {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, 70%);
+      -ms-transform: translate(-50%, 70%);
+          transform: translate(-50%, 70%);
+}
+
+.quelle-page .intro__header ._section-text {
+  position: relative;
+}
+
+.quelle-page .intro__header ._section-text::after {
+  content: '';
+  width: 25%;
+  display: block;
+  height: 2px;
+  background-color: #e9ecef;
+  margin: 3rem auto 0;
+}
+
+.quelle-page .time {
+  margin-top: 270px;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.quelle-page .time::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 22px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  margin: 0 0 0 -22px;
+}
+
+.quelle-page .time__inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 50%;
+}
+
+.quelle-page .time h2,
+.quelle-page .time .h2 {
+  text-shadow: 1px 1px 5px black;
+}
+
+.quelle-page .nature p {
+  letter-spacing: .2px;
+}
+
+.quelle-page .nature .col__image {
+  height: 100%;
+  display: block;
+}
+
+.quelle-page .nature .col:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
+}
+
+.quelle-page .nature .col:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+
+.quelle-page .quelle p {
+  letter-spacing: .2px;
+}
+
+.quelle-page .quelle .col img {
+  width: 100%;
+  height: auto;
+}
+
+.quelle-page .quelle .col:first-child {
+  width: 50%;
+}
+
+.quelle-page .quelle .col:last-child {
+  width: 50%;
+}
+
+.quelle-page .quelle ol li {
+  font-size: 1.3rem;
+  font-family: "Aeroport";
+  color: #003b6d;
+}
+
+.quelle-page .quelle ol li::marker {
+  font-family: "Aeroport" !important;
+  font-weight: 700;
+  font-style: italic;
+  color: #003b6d;
 }
 
 @media (min-width: 576px) {
